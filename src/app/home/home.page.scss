@@ -1,27 +1,95 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+.controls {
+	margin: 0px auto;
+	text-align: center;
+	font-family: sans-serif;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.action{
+	font-size: 20px;
+	-webkit-appearance: none;
+	border: none;
+	background: #00377d;
+	border-radius: 4px;
+  padding: 10px;
+  min-height: 10px;
+  min-width: 10px;
+  margin: 5px;
+	color: #fff;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+label {
+	margin-left: 30px;
 }
 
-#container a {
-  text-decoration: none;
+select {
+	margin: 0 1em;
+	font-size: 1em;
+}
+
+#roboto {
+	width: 20%;
+	height: 20%;
+	border-radius: 100%;
+	position: absolute;
+}
+
+.container {
+	position: relative;
+	width: 500px;
+	height: 500px;
+	left: 50%;
+	transform: translate(-250px, 0);
+  --ion-background-color: #fff !important;
+}
+
+.reportLog {
+	text-align: center;
+  color: #cf741e;
+}
+
+#board {
+	width: 500px;
+	height: 500px;
+	position: absolute;
+	background-image: -moz-linear-gradient(45deg, #cf741e 25%, transparent 25%, transparent 75%, #cf741e 75%, #cf741e 100%), -moz-linear-gradient(45deg, #cf741e 25%, transparent 25%, transparent 75%, #cf741e 75%, #cf741e 100%);
+	background-image: -webkit-linear-gradient(45deg, #cf741e 25%, transparent 25%, transparent 75%, #cf741e 75%, #cf741e 100%), -webkit-linear-gradient(45deg, #cf741e 25%, transparent 25%, transparent 75%, #cf741e 75%, #cf741e 100%);
+	-moz-background-size: 200px 200px;
+	background-size: 200px 200px;
+	-webkit-background-size: 200px 200px;
+	background-position: 0 0, 100px 100px;
+	border: 1px solid #cf741e;
+	border-radius: 4px;
+  //transform: rotateX(60deg) rotateY(0deg) rotateZ(-45deg);
+	//transform-style: preserve-3d;
+}
+
+.North {
+	background: url('../../assets/up.svg') no-repeat left top;
+	transform: rotateX(-60deg) rotateY(0deg) rotateZ(22.5deg) translate3d(-10px, -10px, 30px);
+	//transform-style: preserve-3d;
+}
+
+.South {
+	background: url('../../assets/down.svg') no-repeat left top;
+	//transform: rotateX(-60deg) rotateY(0deg) rotateZ(22.5deg) translate3d(-10px, -10px, 30px);
+  transform: rotateX(
+    -60deg
+    ) rotateY(
+    0deg
+    ) rotateZ(
+    22.5deg
+    ) translate3d(5px, 30px, 21px);
+//	transform-style: preserve-3d;
+}
+
+.East {
+	background: url('../../assets/right.svg') no-repeat left top;
+	transform: rotateX(-60deg) rotateY(0deg) rotateZ(22.5deg) translate3d(-10px, -10px, 30px);
+//	transform-style: preserve-3d;
+}
+
+.West {
+	background: url('../../assets/left.svg') no-repeat left top;
+	transform: rotateX(-60deg) rotateY(0deg) rotateZ(22.5deg) translate3d(-10px, -10px, 30px);
+	//transform-style: preserve-3d;
 }

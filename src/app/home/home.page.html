@@ -1,20 +1,42 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<title>Toy Robot Exercise</title>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<div class="controls">
+   <input type="button" value="LEFT" (click)="turnLeft()" class="action left">
+   <input type="button" value="MOVE" (click)="move()" class="action move">
+   <input type="button" value="RIGHT" (click)="turnRight()" class="action right">
+</div>
+<div class="reportLog" #reportLog></div>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+   <div class="controls" >
+      <label>X:</label>
+      <select #xAxis>
+         <option value="0">0</option>
+         <option value="20">1</option>
+         <option value="40">2</option>
+         <option value="60">3</option>
+         <option value="80">4</option>
+      </select>
+      <label>Y:</label>
+      <select #yAxis>
+         <option value="80">0</option>
+         <option value="60">1</option>
+         <option value="40">2</option>
+         <option value="20">3</option>
+         <option value="0">4</option>
+      </select>
+      <label>Direction:</label>
+      <select #direction>
+         <option value="North">North</option>
+         <option value="South">South</option>
+         <option value="West">West</option>
+         <option value="East">East</option>
+      </select>
+ <br/><br/>
+      <button (click)="placeRobot()" class="action">Place Robot</button>
+   </div>
+   <div class="container">
+      <div id="board">
+         <div id="roboto" #roboto></div>
+      </div>
+   </div>
+   
